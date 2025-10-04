@@ -203,7 +203,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent"
+                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent text-gray-900 bg-white"
                         placeholder="your@email.com"
                         required
                       />
@@ -220,7 +220,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent"
+                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent text-gray-900 bg-white"
                         placeholder="••••••••"
                         required
                       />
@@ -239,7 +239,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                         type="tel"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent"
+                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent text-gray-900 bg-white"
                         placeholder="+91 9876543210"
                         required
                       />
@@ -254,7 +254,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                       type="text"
                       value={otp}
                       onChange={(e) => setOtp(e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent text-gray-900 bg-white"
                       placeholder="Enter 6-digit OTP"
                       maxLength={6}
                     />
@@ -289,7 +289,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                     type="text"
                     value={regName}
                     onChange={(e) => setRegName(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent text-gray-900 bg-white"
                     placeholder="John Doe"
                     required
                   />
@@ -306,7 +306,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                     type="tel"
                     value={regPhone}
                     onChange={(e) => setRegPhone(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent text-gray-900 bg-white"
                     placeholder="+91 9876543210"
                     required
                   />
@@ -323,7 +323,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                     type="email"
                     value={regEmail}
                     onChange={(e) => setRegEmail(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f8fff] focus:border-transparent text-gray-900 bg-white"
                     placeholder="your@email.com"
                   />
                 </div>
