@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { AuthProvider } from './contexts/AuthContext';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import MobileBottomBar from './components/MobileBottomBar';
@@ -8,10 +9,14 @@ import PGDetailPage from './pages/PGDetailPage';
 import AmenitiesPage from './pages/AmenitiesPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
+import UserDashboard from './pages/UserDashboard';
+import AdminDashboard from './pages/AdminDashboard';
 import { pgLocations } from './data/pgData';
+import { useAuth } from './contexts/AuthContext';
 
-function App() {
+function AppContent() {
   const [currentPage, setCurrentPage] = useState('home');
+  const { userProfile } = useAuth();
 
   useEffect(() => {
     // Handle initial hash-based routing
@@ -58,6 +63,14 @@ function App() {
       return <ContactPage />;
     }
 
+    if (currentPage === 'dashboard') {
+      // Route to appropriate dashboard based on user role
+      if (userProfile?.role === 'admin') {
+        return <AdminDashboard />;
+      }
+      return <UserDashboard />;
+    }
+
     if (currentPage.startsWith('pg/')) {
       const slug = currentPage.replace('pg/', '');
       const pg = pgLocations.find(p => p.slug === slug);
@@ -79,6 +92,14 @@ function App() {
       <Footer onNavigate={handleNavigate} />
       <MobileBottomBar />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 }
 
