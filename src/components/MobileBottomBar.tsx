@@ -1,8 +1,8 @@
 import { Phone, MessageCircle } from 'lucide-react';
 
 export default function MobileBottomBar() {
-  const contactNumber = '+91 98765 43210';
-  const whatsappNumber = '919876543210';
+  const contactNumber = '+91 7411962288';
+  const whatsappNumber = '917411962288';
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 md:hidden z-40">
