@@ -39,7 +39,10 @@ jobs:
         run: echo "" > dist/.nojekyll
 
       - name: Create 404.html for SPA fallback
-        run: cp dist/index.html dist/404.html
+        run: |
+          cp dist/index.html dist/404.html
+          echo "Build completed successfully"
+          ls -la dist/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

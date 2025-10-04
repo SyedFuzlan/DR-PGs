@@ -14,10 +14,26 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   useEffect(() => {
+    // Handle initial hash-based routing
+    const hash = window.location.hash.slice(1) || 'home';
+    setCurrentPage(hash);
+
+    // Listen for hash changes
+    const handleHashChange = () => {
+      const newHash = window.location.hash.slice(1) || 'home';
+      setCurrentPage(newHash);
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
 
   const handleNavigate = (page: string) => {
+    window.location.hash = page;
     setCurrentPage(page);
   };
 
