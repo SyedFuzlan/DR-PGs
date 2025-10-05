@@ -48,3 +48,25 @@ export interface Announcement {
   createdBy: string;
   targetUsers?: string[]; // Empty array means all users
 }
+
+export interface PGStats {
+  id: string;
+  name: string;
+  totalBeds: number;
+  occupiedBeds: number;
+  vacantBeds: number;
+  location: string;
+}
+
+export interface BillingRecord {
+  id: string;
+  userId: string;
+  userName: string;
+  pgName: string;
+  roomType: string;
+  amount: number;
+  dueDate: Date;
+  paidDate?: Date;
+  status: 'paid' | 'due' | 'delayed';
+  month: string;
+}

@@ -10,7 +10,7 @@ import AmenitiesPage from './pages/AmenitiesPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import UserDashboard from './pages/UserDashboard';
-import AdminDashboard from './pages/AdminDashboard';
+import AdminDashboard from './pages/AdminDashboardNew';
 import { pgLocations } from './data/pgData';
 import { useAuth } from './contexts/AuthContext';
 
